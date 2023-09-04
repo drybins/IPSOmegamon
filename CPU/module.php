@@ -22,7 +22,7 @@ declare(strict_types=1);
 			//Never delete this line!
 			parent::ApplyChanges();
 			
-			$this->SetTimerInterval("Refresh", 60 * 1000);
+			$this->SetTimerInterval("Refresh_CPU", 60 * 1000);
 		}
 		
 		
