@@ -1,0 +1,12 @@
+{
+    "id": "{6CBD64CC-906C-8748-3AC2-B2AC841E4D9C}",
+    "name": "Drives",
+    "type": 0,
+    "vendor": "",
+    "aliases": [],
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "HDD",
+    "url": ""
+}
