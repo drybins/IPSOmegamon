@@ -34,6 +34,9 @@ declare(strict_types=1);
 		private function Calculate()
 		{
 			$this->SendDebug("Dierk", "CPU", 0);
-			$this->SetValue($this->GetIDForIdent("CPU_0"),2.00);
+			$a = 2.1;
+			$b = 28445;
+			//$this->SetValue($this->GetIDForIdent("CPU_0"),2.00);
+			$this->SetValue(4B,4A);
 		}
 	}
