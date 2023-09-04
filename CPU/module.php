@@ -34,6 +34,6 @@ declare(strict_types=1);
 		private function Calculate()
 		{
 			
-			$this->SetValue(37861,"2.00");
+			$this->SetValue($this->GetIDForIdent("CPU_0"),"2.00");
 		}
 	}
