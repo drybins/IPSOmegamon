@@ -8,7 +8,7 @@ declare(strict_types=1);
 			//Never delete this line!
 			parent::Create();
 			
-			$this->RegisterTimer("Refresh_CPU", 0, 'Omegamon_RefreshCPU($_IPS[\'TARGET\']);');
+			$this->RegisterTimer("Refresh_CPU", 0, 'CPU_Refresh($_IPS[\'TARGET\']);');
 		}
 
 		public function Destroy()
@@ -21,15 +21,19 @@ declare(strict_types=1);
 		{
 			//Never delete this line!
 			parent::ApplyChanges();
+			
+			$this->SetTimerInterval("Refresh", 60 * 1000);
 		}
 		
 		
-		public function RefreshCPU()
+		public function Refresh()
 		{
 			$this->calculate();   
 		}
 		
 		private function Calculate()
 		{
+			
+			$this->SetValue("2.00",37861);
 		}
 	}
