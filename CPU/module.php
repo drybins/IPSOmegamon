@@ -34,6 +34,6 @@ declare(strict_types=1);
 		private function Calculate()
 		{
 			
-			$this->SetValue("2.00",37861);
+			$this->SetValue(37861,"2.00");
 		}
 	}
