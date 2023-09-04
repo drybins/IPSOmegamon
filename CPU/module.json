@@ -1,0 +1,12 @@
+{
+    "id": "{51CB9982-85B7-A926-2F5C-25FF61470A69}",
+    "name": "CPU",
+    "type": 0,
+    "vendor": "",
+    "aliases": [],
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "CPU",
+    "url": ""
+}
