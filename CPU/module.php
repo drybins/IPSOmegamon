@@ -33,7 +33,7 @@ declare(strict_types=1);
 		
 		private function Calculate()
 		{
-			
+			$this->SendDebug("Dierk", "CPU", 0);
 			$this->SetValue($this->GetIDForIdent("CPU_0"),2.00);
 		}
 	}
