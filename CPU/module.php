@@ -36,7 +36,7 @@ declare(strict_types=1);
 			$this->SendDebug("Dierk", "CPU", 0);
 			$a = 2.1;
 			$b = 28445;
-			//$this->SetValue($this->GetIDForIdent("CPU_0"),2.00);
-			SetValue($b,$a);
+			SetValue($this->GetIDForIdent("CPU_0"),2.20);
+			//SetValue($b,$a);
 		}
 	}
