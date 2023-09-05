@@ -8,8 +8,8 @@ declare(strict_types=1);
 			//Never delete this line!
 			parent::Create();
 			
-			$RC = CreateCategory("Omegamon", 0);
-			$RC = CreateCategory("CPU", $RC);
+			$RC = $this->CreateCategory("Omegamon", 0);
+			$RC = $this->CreateCategory("CPU", $RC);
 			$this->RegisterTimer("Refresh_CPU", 0, 'CPU_Refresh($_IPS[\'TARGET\']);');
 		}
 
