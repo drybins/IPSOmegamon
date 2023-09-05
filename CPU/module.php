@@ -10,12 +10,19 @@ declare(strict_types=1);
 			
 			$RC = $this->CreateCategory("Omegamon", 0);
 			$RC = $this->CreateCategory("CPU", $RC);
-			
-			$VarID = $this->CreateVariable("CPU_Anz_Kerne", "Anzahl Kerne der CPU", $RC, 50);
+			$KategorieID = $RC;
+			$VarID = $this->CreateVariable("CPU_Anz_Kerne", "Anzahl Kerne der CPU", $KategorieID, 50);
 			//IPS_SetParent($VarID, $RC);
 			$a = count(Sys_GetCPUInfo());
 			$b = $a -1;
 			SetValue($VarID, $b);
+			
+			for($i=0;$i<$b;$i++)
+			{
+				$c = "CPU_" . $i;
+				$RC = $this->CreateVariable($c, $c, $KategorieID, 10+$i);
+			}
+			$RC = CreateVariable("CPU_Avg", "CPU_Avg", $KategorieID, 0);
 			
 			$this->RegisterTimer("Refresh_CPU", 0, 'CPU_Refresh($_IPS[\'TARGET\']);');
 		}
