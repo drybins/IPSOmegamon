@@ -40,4 +40,33 @@ declare(strict_types=1);
 			SetValue($b,2.20);
 			//SetValue($b,$a);
 		}
+
+		private function CreateCategory($KategorieName, $Parent)
+		{
+    			//Echo "CreateCat started";
+   			$KategorieID = @IPS_GetCategoryIDByName($KategorieName, $Parent); 
+    			if($KategorieID === false)
+   	 		{
+       	 			//Echo "Create CAT";
+        			$KategorieID = IPS_CreateCategory();        // Kategorie anlegen
+        			IPS_SetName($KategorieID, $KategorieName);  // Kategorie benennen
+        			IPS_SetParent($KategorieID, $Parent);       // Kategorie an die richtige stelle hängen 
+    			}
+    			return $KategorieID;
+		}
+
+		private function CreateVariable($VarName, $Type, $Parent)		
+		{
+    			//Echo "CreateCat started";
+    			$VarID = @IPS_GetVariableIDByName($VarName, $Parent); 
+    			if($VarID === false)
+    			{
+        		//Echo "Create CAT";
+        		$VarID = IPS_CreateVariable($Type);        // Kategorie anlegen
+       		 	IPS_SetName($VarID, $VarName);  // Kategorie benennen
+        		IPS_SetIdent($VarID, $VarName);
+        		IPS_SetParent($VarID, $Parent);       // Kategorie an die richtige stelle hängen 
+    		}
+    		return $VarID;	
+		}
 	}
