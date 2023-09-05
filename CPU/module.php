@@ -8,6 +8,8 @@ declare(strict_types=1);
 			//Never delete this line!
 			parent::Create();
 			
+			$RC = CreateCategory("Omegamon", 0);
+			$RC = CreateCategory("CPU", $RC);
 			$this->RegisterTimer("Refresh_CPU", 0, 'CPU_Refresh($_IPS[\'TARGET\']);');
 		}
 
@@ -39,5 +41,17 @@ declare(strict_types=1);
 			$c = $this->GetIDForIdent("CPU_0");
 			SetValue($b,2.20);
 			//SetValue($b,$a);
+		}
+		
+		private function CreateCategory($KategorieName, $Parent)
+		{
+			$KategorieID = @IPS_GetCategoryIDByName($KategorieName, $Parent); 
+			if($KategorieID === false)
+			{
+				$KategorieID = IPS_CreateCategory();        // Kategorie anlegen
+				IPS_SetName($KategorieID, $KategorieName);  // Kategorie benennen
+				IPS_SetParent($KategorieID, $Parent);       // Kategorie an die richtige stelle hängen 
+			}
+			return $KategorieID;
 		}
 	}
