@@ -67,7 +67,7 @@ declare(strict_types=1);
 			$VarID = @IPS_GetVariableIDByName($VarName, $Parent); 
 			if($VarID === false)
 			{
-				$this->RegisterVariableFloat($VarIdent, $VarName, "", $Sort);
+				$VarID = $this->RegisterVariableFloat($VarIdent, $VarName, "", $Sort);
 				IPS_SetParent($VarID, $Parent);       
 			}
 			return $VarID;
