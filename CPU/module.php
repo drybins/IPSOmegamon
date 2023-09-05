@@ -11,8 +11,8 @@ declare(strict_types=1);
 			$RC = $this->CreateCategory("Omegamon", 0);
 			$RC = $this->CreateCategory("CPU", $RC);
 			
-			$VarID = $this->RegisterVariableFloat("CPU_Anz_Kerne", "Anzahl Kerne der CPU", "", 50);
-			IPS_SetParent($VarID, $RC);
+			$VarID = $this->CreateVariable("CPU_Anz_Kerne", "Anzahl Kerne der CPU", $RC, 50);
+			//IPS_SetParent($VarID, $RC);
 			$a = count(Sys_GetCPUInfo());
 			$b = $a -1;
 			SetValue($VarID, $b);
@@ -60,5 +60,16 @@ declare(strict_types=1);
 				IPS_SetParent($KategorieID, $Parent);       // Kategorie an die richtige stelle hängen 
 			}
 			return $KategorieID;
+		}
+		
+		private function CreateVariable($VarIdent, $VarName, $Parent, $Sort)
+		{
+			$VarID = @IPS_GetVariableIDByName($VarName, $Parent); 
+			if($VarID === false)
+			{
+				$this->RegisterVariableFloat($VarIdent, $VarName, "", $Sort);
+				IPS_SetParent($VarID, $Parent);       
+			}
+			return $VarID;
 		}
 	}
