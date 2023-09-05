@@ -19,10 +19,11 @@ declare(strict_types=1);
 			
 			for($i=0;$i<$b;$i++)
 			{
-				$c = "CPU_" . $i;
-				$RC = $this->CreateVariable($c, $c, $KategorieID, 10+$i);
+				$c = "CPU" . $i;
+				$d = "CPU_" . $i;
+				$RC = $this->CreateVariable($c, $D, $KategorieID, 10+$i);
 			}
-			$RC = $this->CreateVariable("CPU_Avg", "CPU_Avg", $KategorieID, 0);
+			$RC = $this->CreateVariable("CPUAvg", "CPU average", $KategorieID, 0);
 			
 			$this->RegisterTimer("Refresh_CPU", 0, 'CPU_Refresh($_IPS[\'TARGET\']);');
 		}
