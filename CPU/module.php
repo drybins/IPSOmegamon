@@ -11,7 +11,7 @@ declare(strict_types=1);
 			$RC = $this->CreateCategory("Omegamon", 0);
 			$RC = $this->CreateCategory("CPU", $RC);
 			
-			$variablenID = $this->RegisterVariableFloat("CPU_Anz_Kerne", "Anzahl Kerne der CPU", "", 50);
+			$VarID = $this->RegisterVariableFloat("CPU_Anz_Kerne", "Anzahl Kerne der CPU", "", 50);
 			IPS_SetParent($VarID, $RC);
 			$this->RegisterTimer("Refresh_CPU", 0, 'CPU_Refresh($_IPS[\'TARGET\']);');
 		}
