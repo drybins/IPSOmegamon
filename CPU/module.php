@@ -22,7 +22,7 @@ declare(strict_types=1);
 				$c = "CPU_" . $i;
 				$RC = $this->CreateVariable($c, $c, $KategorieID, 10+$i);
 			}
-			$RC = CreateVariable("CPU_Avg", "CPU_Avg", $KategorieID, 0);
+			$RC = $this->CreateVariable("CPU_Avg", "CPU_Avg", $KategorieID, 0);
 			
 			$this->RegisterTimer("Refresh_CPU", 0, 'CPU_Refresh($_IPS[\'TARGET\']);');
 		}
