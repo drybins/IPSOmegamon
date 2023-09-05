@@ -19,7 +19,7 @@ declare(strict_types=1);
 			
 			for($i=0;$i<$b;$i++)
 			{
-				$c = "CPU" . $i;
+				$c = "CPU" . $i; 
 				$d = "CPU_" . $i;
 				$RC = $this->CreateVariable($c, $d, $KategorieID, 10+$i);
 			}
