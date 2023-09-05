@@ -13,6 +13,10 @@ declare(strict_types=1);
 			
 			$VarID = $this->RegisterVariableFloat("CPU_Anz_Kerne", "Anzahl Kerne der CPU", "", 50);
 			IPS_SetParent($VarID, $RC);
+			$a = count(Sys_GetCPUInfo());
+			$b = $a -1;
+			SetValue($VarID, $b);
+			
 			$this->RegisterTimer("Refresh_CPU", 0, 'CPU_Refresh($_IPS[\'TARGET\']);');
 		}
 
