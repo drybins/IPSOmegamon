@@ -21,7 +21,7 @@ declare(strict_types=1);
 			{
 				$c = "CPU" . $i;
 				$d = "CPU_" . $i;
-				$RC = $this->CreateVariable($c, $D, $KategorieID, 10+$i);
+				$RC = $this->CreateVariable($c, $d, $KategorieID, 10+$i);
 			}
 			$RC = $this->CreateVariable("CPUAvg", "CPU average", $KategorieID, 0);
 			
