@@ -60,6 +60,7 @@ declare(strict_types=1);
 			print_r($this->GetReferenceList());
 			//IPS_GetObjectIDByIdent("CPU0",33275);
 			$c = $this->GetIDForIdent("Dierk");
+			IPS_LogMessage("KategorieID: " . $c , "Dierk2");
 			$this->SetValue("CPUAvg",2.20);
 			//SetValue($b,$a);
 		}
