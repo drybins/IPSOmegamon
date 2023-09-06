@@ -50,7 +50,7 @@ declare(strict_types=1);
 		
 		private function Calculate()
 		{
-			$this->LogMessage("DierkO" . $KategorieID , "CPU", 0);
+			IPS_LogMessage("KategorieID: " . $KategorieID , "Dierk2");
 			
 			//$a = 2.1;
 			//$b = 28445;
