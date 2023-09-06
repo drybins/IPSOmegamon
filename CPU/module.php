@@ -55,6 +55,7 @@ declare(strict_types=1);
 			//$a = 2.1;
 			//$b = 28445;
 			//IPS_GetCategoryIDByName("CPU", 
+			print_r($this->GetReferenceList());
 			IPS_GetObjectIDByIdent("CPU0",33275);
 			$c = $this->GetIDForIdent("CPU_Anz_Kerne");
 			$this->SetValue("CPUAvg",2.20);
