@@ -25,6 +25,8 @@ declare(strict_types=1);
 			}
 			$RC = $this->CreateVariable("CPUAvg", "CPU average", $KategorieID, 0);
 			
+			$this->RegisterVariableFloat("Dierk", "Dierk", "", 11);
+			
 			$this->RegisterTimer("Refresh_CPU", 0, 'CPU_Refresh($_IPS[\'TARGET\']);');
 		}
 
@@ -50,14 +52,14 @@ declare(strict_types=1);
 		
 		private function Calculate()
 		{
-			IPS_LogMessage("KategorieID: " . $KategorieID , "Dierk2");
+			//IPS_LogMessage("KategorieID: " . $KategorieID , "Dierk2");
 			
 			//$a = 2.1;
 			//$b = 28445;
 			//IPS_GetCategoryIDByName("CPU", 
 			print_r($this->GetReferenceList());
-			IPS_GetObjectIDByIdent("CPU0",33275);
-			$c = $this->GetIDForIdent("CPU_Anz_Kerne");
+			//IPS_GetObjectIDByIdent("CPU0",33275);
+			$c = $this->GetIDForIdent("Dierk");
 			$this->SetValue("CPUAvg",2.20);
 			//SetValue($b,$a);
 		}
