@@ -54,7 +54,7 @@ declare(strict_types=1);
 			$a = 2.1;
 			$b = 28445;
 			$c = $this->GetIDForIdent("CPU_Anz_Kerne");
-			SetValue($b,2.20);
+			$this->SetValue("CPUAvg",2.20);
 			//SetValue($b,$a);
 		}
 		
