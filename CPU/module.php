@@ -50,11 +50,11 @@ declare(strict_types=1);
 		
 		private function Calculate()
 		{
-			$this->SendDebug("DierkO" . $KategorieID , "CPU", 0);
+			$this->LogMessage("DierkO" . $KategorieID , "CPU", 0);
 			
 			//$a = 2.1;
 			//$b = 28445;
-			//IPS_GetCategoryIDByName("CPU", ;
+			//IPS_GetCategoryIDByName("CPU", 
 			IPS_GetObjectIDByIdent("CPU0",33275);
 			$c = $this->GetIDForIdent("CPU_Anz_Kerne");
 			$this->SetValue("CPUAvg",2.20);
